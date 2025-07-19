@@ -1,31 +1,97 @@
-# Embedded Systems Intern Assignment: Basic Heater Control System
+# 🔥 Basic Heater Control System – Embedded Systems Intern Assignment
 
-**Applicant Name:** [Hiba Fathima]  
+**Author:** Hiba Fathima P C  
 **Date:** July 19, 2025  
+**Simulator:** [Wokwi Project Link](https://wokwi.com/projects/436891492894744577)
 
-This repository contains the design and implementation of a basic heater control system for the upliance.ai Embedded Systems Intern Assignment. It includes temperature threshold monitoring, heater simulation, overheating protection, visual/audio indicators, and BLE simulation.
+---
 
-## 📁 Project Structure
-- `sketch.ino`: Main Arduino C++ code for ESP32
-- `README.md`: Detailed explanation of the project, design, wiring, features, and how to simulate in Wokwi
+## 📌 Overview
 
-## ✅ Features
-- State-based heater control logic
-- Red LED for heating simulation
-- Green LED for status indication
-- Buzzer alarm for overheat
-- LM35 analog temperature sensor support
-- Non-blocking timing using `millis()`
-- BLE simulated via Serial logs
+This project implements a **basic heater control system** using an LM35 temperature sensor, an ESP32 microcontroller, and a simulated heating mechanism (Red LED). Built for the upliance.ai Embedded Systems Intern Assignment, it demonstrates temperature-driven state control, overheating protection, and visual/audio feedback features.
 
-## 🚀 How to Simulate in Wokwi
-1. Go to https://wokwi.com/
-2. Start a new ESP32 Arduino project
-3. Add components:
-   - ESP32 Dev Module
-   - LM35 sensor (OUT to GPIO34)
-   - Red LED (GPIO17)
-   - Green LED (GPIO16)
-   - Buzzer (GPIO18)
-4. Paste the code from `sketch.ino` into the project
-5. Run simulation and observe serial output
+---
+
+## 🧰 Components Used
+
+| Component         | Quantity | Role                                  |
+|------------------|----------|---------------------------------------|
+| ESP32 Dev Module | 1        | Microcontroller                       |
+| LM35             | 1        | Temperature sensing                   |
+| Red LED          | 1        | Simulated heater                      |
+| Green LED        | 1        | Status indicator (safe state)         |
+| Buzzer           | 1        | Overheat alarm                        |
+| 220Ω Resistors   | 2        | For LEDs                              |
+| Breadboard + Wires | —      | For wiring                            |
+
+---
+
+## 📈 System Architecture
+
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/596ebc3d-2855-4cd8-8cb8-a85192285145" />
+
+
+
+### Modules:
+- **LM35**: Analog temperature sensor (10mV/°C)
+- **ESP32**: Reads sensor, drives logic
+- **Red LED**: Heater indicator (ON = Heating)
+- **Green LED**: Stable/safe state indicator
+- **Buzzer**: Alerts during overheating
+- **Serial Monitor**: Logs state and temperature
+
+---
+
+## 🧠 State Machine Logic
+
+| State          | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `IDLE`         | Temp < HEATING_THRESHOLD – system waits                                     |
+| `HEATING`      | Temp < TARGET_TEMPERATURE – heater ON                                       |
+| `STABILIZING`  | Temp > TARGET_TEMPERATURE – heater OFF, temp settling                       |
+| `TARGET_REACHED` | Temp in [STABILIZE_LOWER, STABILIZE_UPPER] – heater OFF                   |
+| `OVERHEAT`     | Temp > OVERHEAT_THRESHOLD – heater OFF, buzzer ON                           |
+
+---
+
+## 🚀 How to Run (in Wokwi)
+
+1. Open the project: [Wokwi Link](https://wokwi.com/projects/436891492894744577)
+2. Click “Run” to simulate.
+3. Adjust LM35 temperature slider to observe state transitions.
+4. Watch the Serial Monitor for logs and status updates.
+
+**GPIO Pin Mapping:**
+
+| Pin      | Component        |
+|----------|------------------|
+| GPIO34   | LM35 Vout (ADC)  |
+| GPIO17   | Red LED (Heater) |
+| GPIO16   | Green LED (Status) |
+| GPIO18   | Buzzer           |
+
+---
+
+## 💡 Features Implemented
+
+✅ Temperature-based state transitions  
+✅ Overheating detection with buzzer  
+✅ Status LED for safe zones  
+✅ Periodic sensor reads (non-blocking)  
+✅ Serial logging for debugging
+
+---
+
+## ✨ Future Roadmap
+
+- 🔄 Dual-sensor redundancy
+- 🧠 PID temperature control
+- 🧊 Adaptive cool-down & manual reset
+- 📱 Wi-Fi/BLE + UI for heating profiles
+- 🕒 RTC-based scheduling
+
+---
+
+## 📁 Repository Structure
+
+
