@@ -53,6 +53,7 @@ This project implements a **basic heater control system** using an LM35 temperat
 | `OVERHEAT`     | Temp > OVERHEAT_THRESHOLD – heater OFF, buzzer ON                           |
 
 ---
+<img width="468" height="320" alt="image" src="https://github.com/user-attachments/assets/6d6329ed-0754-45c1-9a3b-f3d8e6100316" />
 
 ##  How to Run (in Wokwi)
 
