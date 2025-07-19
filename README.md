@@ -1,6 +1,6 @@
 # Embedded Systems Intern Assignment: Basic Heater Control System
 
-**Applicant Name:** [Your Full Name]  
+**Applicant Name:** [Hiba Fathima]  
 **Date:** July 19, 2025  
 
 This repository contains the design and implementation of a basic heater control system for the upliance.ai Embedded Systems Intern Assignment. It includes temperature threshold monitoring, heater simulation, overheating protection, visual/audio indicators, and BLE simulation.
