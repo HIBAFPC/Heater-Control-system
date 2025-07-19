@@ -1,4 +1,4 @@
-# 🔥 Basic Heater Control System – Embedded Systems Intern Assignment
+#  Basic Heater Control System – Embedded Systems Intern Assignment
 
 **Author:** Hiba Fathima P C  
 **Date:** July 19, 2025  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a **basic heater control system** using an LM35 temperature sensor, an ESP32 microcontroller, and a simulated heating mechanism (Red LED). Built for the upliance.ai Embedded Systems Intern Assignment, it demonstrates temperature-driven state control, overheating protection, and visual/audio feedback features.
 
@@ -26,7 +26,7 @@ This project implements a **basic heater control system** using an LM35 temperat
 
 ---
 
-## 📈 System Architecture
+##  System Architecture
 
 <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/596ebc3d-2855-4cd8-8cb8-a85192285145" />
 
@@ -42,7 +42,7 @@ This project implements a **basic heater control system** using an LM35 temperat
 
 ---
 
-## 🧠 State Machine Logic
+##  State Machine Logic
 
 | State          | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ This project implements a **basic heater control system** using an LM35 temperat
 
 ---
 
-## 🚀 How to Run (in Wokwi)
+##  How to Run (in Wokwi)
 
 1. Open the project: [Wokwi Link](https://wokwi.com/projects/436891492894744577)
 2. Click “Run” to simulate.
@@ -92,6 +92,6 @@ This project implements a **basic heater control system** using an LM35 temperat
 
 ---
 
-## 📁 Repository Structure
+
 
 
