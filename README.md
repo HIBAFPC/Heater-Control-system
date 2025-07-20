@@ -46,8 +46,8 @@ This project implements a **basic heater control system** using an LM35 temperat
 
 | State          | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
-| `IDLE`         | Temp < HEATING_THRESHOLD – system waits                                     |
-| `HEATING`      | Temp < TARGET_TEMPERATURE – heater ON                                       |
+| `HEATING`         | Temp < HEATING_THRESHOLD –    heater ON                                  |
+| `IDLE`      | Temp < TARGET_TEMPERATURE – system waits                                    |
 | `STABILIZING`  | Temp > TARGET_TEMPERATURE – heater OFF, temp settling                       |
 | `TARGET_REACHED` | Temp in [STABILIZE_LOWER, STABILIZE_UPPER] – heater OFF                   |
 | `OVERHEAT`     | Temp > OVERHEAT_THRESHOLD – heater OFF, buzzer ON                           |
